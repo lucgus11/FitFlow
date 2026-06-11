@@ -1,27 +1,25 @@
-// types/fit.ts
-
 export type DifficultyLevel = "débutant" | "intermédiaire" | "avancé";
 
 export interface FitMetadata {
-  name: string;            // ex: "Full Body HIIT"
+  name: string;
   description: string;
-  totalDuration: number;   // durée totale estimée, en secondes
+  totalDuration: number; // seconds
   level: DifficultyLevel;
   author: string;
-  version?: string;        // ex: "1.0"
-  createdAt?: string;       // ISO date
+  version?: string;
+  createdAt?: string;
 }
 
 export interface FitExercise {
-  name: string;            // ex: "Burpees"
-  duration: number;        // temps d'effort, en secondes
-  rest: number;            // temps de repos après l'exercice, en secondes
-  cycles: number;          // nombre de répétitions de l'exercice/circuit
-  instructions?: string;   // consigne courte optionnelle
+  name: string;
+  duration: number; // effort in seconds
+  rest: number; // rest in seconds
+  cycles: number; // number of repetitions
+  instructions?: string;
 }
 
 export interface FitBlock {
-  blockName: string;       // ex: "Échauffement", "Corps de séance", "Récupération"
+  blockName: string;
   exercises: FitExercise[];
 }
 
@@ -29,3 +27,39 @@ export interface FitFile {
   metadata: FitMetadata;
   blocks: FitBlock[];
 }
+
+export type StepPhase = "work" | "rest";
+
+export interface TimelineStep {
+  blockIndex: number;
+  blockName: string;
+  exerciseIndex: number;
+  exerciseName: string;
+  nextExerciseName: string | null;
+  cycle: number;
+  totalCycles: number;
+  phase: StepPhase;
+  duration: number;
+}
+
+export type WorkerOutMessage =
+  | {
+      type: "tick";
+      remaining: number;
+      step: TimelineStep;
+      stepIndex: number;
+      totalSteps: number;
+      elapsedTotal: number;
+      totalDuration: number;
+    }
+  | { type: "beep"; kind: "short" | "long" | "start" | "end" }
+  | { type: "done" }
+  | { type: "status"; running: boolean };
+
+export type WorkerInMessage =
+  | { type: "load"; payload: TimelineStep[] }
+  | { type: "start" }
+  | { type: "pause" }
+  | { type: "skip" }
+  | { type: "back" }
+  | { type: "reset" };
