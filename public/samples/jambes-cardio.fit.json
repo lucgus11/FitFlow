@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "name": "Jambes & Cardio Express",
+    "description": "Séance de 20 minutes sans matériel ciblant les jambes et le cardio.",
+    "totalDuration": 1200,
+    "level": "intermédiaire",
+    "author": "FitFile Generator AI",
+    "version": "1.0"
+  },
+  "blocks": [
+    {
+      "blockName": "Échauffement",
+      "exercises": [
+        { "name": "Jumping jacks", "duration": 30, "rest": 10, "cycles": 1 },
+        { "name": "Montées de genoux", "duration": 30, "rest": 10, "cycles": 1 },
+        { "name": "Cercles de hanches", "duration": 20, "rest": 10, "cycles": 1 }
+      ]
+    },
+    {
+      "blockName": "Circuit Jambes & Cardio",
+      "exercises": [
+        { "name": "Squats sautés", "duration": 40, "rest": 20, "cycles": 4 },
+        { "name": "Fentes avant alternées", "duration": 40, "rest": 20, "cycles": 4 },
+        { "name": "Mountain climbers", "duration": 40, "rest": 20, "cycles": 4 },
+        { "name": "Squats sumo", "duration": 40, "rest": 20, "cycles": 3 },
+        { "name": "Hip thrusts", "duration": 40, "rest": 20, "cycles": 3 }
+      ]
+    },
+    {
+      "blockName": "Récupération",
+      "exercises": [
+        { "name": "Étirement quadriceps", "duration": 25, "rest": 5, "cycles": 1 },
+        { "name": "Étirement mollets", "duration": 25, "rest": 5, "cycles": 1 },
+        { "name": "Respiration profonde", "duration": 30, "rest": 0, "cycles": 1 }
+      ]
+    }
+  ]
+}
