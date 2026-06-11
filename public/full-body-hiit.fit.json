@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "name": "Full Body HIIT",
+    "description": "Séance HIIT complète sans matériel, idéale pour brûler des calories et travailler tout le corps.",
+    "totalDuration": 1200,
+    "level": "intermédiaire",
+    "author": "FitFile Generator AI",
+    "version": "1.0"
+  },
+  "blocks": [
+    {
+      "blockName": "Échauffement",
+      "exercises": [
+        { "name": "Jumping jacks", "duration": 30, "rest": 10, "cycles": 1 },
+        { "name": "Rotations de bras", "duration": 20, "rest": 10, "cycles": 1 },
+        { "name": "Talons-fesses", "duration": 30, "rest": 10, "cycles": 1 },
+        { "name": "Montées de genoux", "duration": 30, "rest": 15, "cycles": 1 }
+      ]
+    },
+    {
+      "blockName": "Corps de séance",
+      "exercises": [
+        { "name": "Squats", "duration": 40, "rest": 20, "cycles": 3 },
+        { "name": "Pompes", "duration": 30, "rest": 20, "cycles": 3 },
+        { "name": "Mountain climbers", "duration": 40, "rest": 20, "cycles": 3 },
+        { "name": "Fentes alternées", "duration": 40, "rest": 20, "cycles": 3 },
+        { "name": "Gainage planche", "duration": 45, "rest": 20, "cycles": 2 },
+        { "name": "Burpees", "duration": 30, "rest": 25, "cycles": 3 }
+      ]
+    },
+    {
+      "blockName": "Retour au calme",
+      "exercises": [
+        { "name": "Étirement quadriceps", "duration": 30, "rest": 5, "cycles": 1 },
+        { "name": "Étirement ischio-jambiers", "duration": 30, "rest": 5, "cycles": 1 },
+        { "name": "Étirement dorsal (chat-vache)", "duration": 30, "rest": 0, "cycles": 1 }
+      ]
+    }
+  ]
+}
